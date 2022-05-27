@@ -12,6 +12,7 @@ namespace WindowsFormsDB
 {
     public partial class Menu : Form
     {
+
         public Menu()
         {
             InitializeComponent();
@@ -19,6 +20,10 @@ namespace WindowsFormsDB
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'excursions1DataSet.BusMark' table. You can move, or remove it, as needed.
+            this.busMarkTableAdapter.Fill(this.excursions1DataSet.BusMark);
+            // TODO: This line of code loads data into the 'excursions1DataSet.ExcursionType' table. You can move, or remove it, as needed.
+            this.excursionTypeTableAdapter.Fill(this.excursions1DataSet.ExcursionType);
             // TODO: This line of code loads data into the 'excursions1DataSet.Driver' table. You can move, or remove it, as needed.
             this.driverTableAdapter.Fill(this.excursions1DataSet.Driver);
             // TODO: This line of code loads data into the 'excursions1DataSet.Bus' table. You can move, or remove it, as needed.
