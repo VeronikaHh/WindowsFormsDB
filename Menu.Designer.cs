@@ -31,13 +31,21 @@ namespace WindowsFormsDB
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.excursionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distanceKMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countOfCustomersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.excursionTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.excursionTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.excursions1DataSet = new WindowsFormsDB.Excursions1DataSet();
+            this.excursionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
-            this.excursionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.excursions1DataSet = new WindowsFormsDB.Excursions1DataSet();
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
@@ -48,6 +56,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -62,6 +71,8 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.clientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,9 +93,25 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveNextItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.paymentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.excursionIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clientIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isPaidDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.paidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.busIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isOnGoingDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.busMarkBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.numberPlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.consumptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.busBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem3 = new System.Windows.Forms.ToolStripButton();
@@ -98,6 +125,8 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveNextItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem4 = new System.Windows.Forms.ToolStripButton();
@@ -112,61 +141,33 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveNextItem4 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem4 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.excursionTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionTableAdapter();
-            this.clientTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ClientTableAdapter();
-            this.paymentTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.PaymentTableAdapter();
-            this.busTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.BusTableAdapter();
-            this.driverTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.DriverTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.excursionTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.excursionTypeTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionTypeTableAdapter();
-            this.paymentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.excursionIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.clientIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isPaidDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.paidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.busMarkBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.busMarkTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.BusMarkTableAdapter();
-            this.busIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isOnGoingDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.numberPlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.consumptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.excursionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distanceKMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countOfCustomersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.excursionTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.driverIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isOnGoingDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.driverNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.driverLastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isOnVocationDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.excursionTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionTableAdapter();
+            this.clientTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ClientTableAdapter();
+            this.paymentTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.PaymentTableAdapter();
+            this.busTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.BusTableAdapter();
+            this.driverTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.DriverTableAdapter();
+            this.excursionTypeTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionTypeTableAdapter();
+            this.busMarkTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.BusMarkTableAdapter();
+            this.toolStripComboExc = new System.Windows.Forms.ToolStripComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursionTypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -179,6 +180,7 @@ namespace WindowsFormsDB
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busMarkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).BeginInit();
             this.bindingNavigator4.SuspendLayout();
@@ -188,9 +190,6 @@ namespace WindowsFormsDB
             ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excursionTypeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.busMarkBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -219,6 +218,94 @@ namespace WindowsFormsDB
             this.tabPage1.Text = "Excursions";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.excursionIdDataGridViewTextBoxColumn,
+            this.startDateDataGridViewTextBoxColumn,
+            this.durationDataGridViewTextBoxColumn,
+            this.distanceKMDataGridViewTextBoxColumn,
+            this.countOfCustomersDataGridViewTextBoxColumn,
+            this.excursionTypeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.excursionBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 66);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1304, 381);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // excursionIdDataGridViewTextBoxColumn
+            // 
+            this.excursionIdDataGridViewTextBoxColumn.DataPropertyName = "excursionId";
+            this.excursionIdDataGridViewTextBoxColumn.HeaderText = "excursionId";
+            this.excursionIdDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.excursionIdDataGridViewTextBoxColumn.Name = "excursionIdDataGridViewTextBoxColumn";
+            this.excursionIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.excursionIdDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "startDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "startDate";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // durationDataGridViewTextBoxColumn
+            // 
+            this.durationDataGridViewTextBoxColumn.DataPropertyName = "duration";
+            this.durationDataGridViewTextBoxColumn.HeaderText = "duration";
+            this.durationDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.durationDataGridViewTextBoxColumn.Name = "durationDataGridViewTextBoxColumn";
+            this.durationDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // distanceKMDataGridViewTextBoxColumn
+            // 
+            this.distanceKMDataGridViewTextBoxColumn.DataPropertyName = "distanceKM";
+            this.distanceKMDataGridViewTextBoxColumn.HeaderText = "distanceKM";
+            this.distanceKMDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.distanceKMDataGridViewTextBoxColumn.Name = "distanceKMDataGridViewTextBoxColumn";
+            this.distanceKMDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // countOfCustomersDataGridViewTextBoxColumn
+            // 
+            this.countOfCustomersDataGridViewTextBoxColumn.DataPropertyName = "countOfCustomers";
+            this.countOfCustomersDataGridViewTextBoxColumn.HeaderText = "countOfCustomers";
+            this.countOfCustomersDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.countOfCustomersDataGridViewTextBoxColumn.Name = "countOfCustomersDataGridViewTextBoxColumn";
+            this.countOfCustomersDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // excursionTypeDataGridViewTextBoxColumn
+            // 
+            this.excursionTypeDataGridViewTextBoxColumn.DataPropertyName = "excursionType";
+            this.excursionTypeDataGridViewTextBoxColumn.DataSource = this.excursionTypeBindingSource;
+            this.excursionTypeDataGridViewTextBoxColumn.DisplayMember = "typeName";
+            this.excursionTypeDataGridViewTextBoxColumn.HeaderText = "excursionType";
+            this.excursionTypeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.excursionTypeDataGridViewTextBoxColumn.Name = "excursionTypeDataGridViewTextBoxColumn";
+            this.excursionTypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.excursionTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.excursionTypeDataGridViewTextBoxColumn.ValueMember = "typeId";
+            this.excursionTypeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // excursionTypeBindingSource
+            // 
+            this.excursionTypeBindingSource.DataMember = "ExcursionType";
+            this.excursionTypeBindingSource.DataSource = this.excursions1DataSet;
+            // 
+            // excursions1DataSet
+            // 
+            this.excursions1DataSet.DataSetName = "Excursions1DataSet";
+            this.excursions1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // excursionBindingSource
+            // 
+            this.excursionBindingSource.DataMember = "Excursion";
+            this.excursionBindingSource.DataSource = this.excursions1DataSet;
+            // 
             // bindingNavigator2
             // 
             this.bindingNavigator2.AddNewItem = this.bindingNavigatorAddNewItem1;
@@ -240,8 +327,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorAddNewItem1,
             this.bindingNavigatorDeleteItem1,
             this.toolStripSeparator1,
-            this.toolStripTextBox1,
-            this.toolStripButton1});
+            this.toolStripComboExc});
             this.bindingNavigator2.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem1;
@@ -261,16 +347,6 @@ namespace WindowsFormsDB
             this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem1.Text = "Add new";
-            // 
-            // excursionBindingSource
-            // 
-            this.excursionBindingSource.DataMember = "Excursion";
-            this.excursionBindingSource.DataSource = this.excursions1DataSet;
-            // 
-            // excursions1DataSet
-            // 
-            this.excursions1DataSet.DataSetName = "Excursions1DataSet";
-            this.excursions1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem1
             // 
@@ -348,6 +424,11 @@ namespace WindowsFormsDB
             // 
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
             this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // tabPage2
             // 
@@ -484,6 +565,20 @@ namespace WindowsFormsDB
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Items.AddRange(new object[] {
+            "all",
+            "with debts",
+            "without debts"});
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 33);
             // 
             // dataGridView2
             // 
@@ -679,6 +774,20 @@ namespace WindowsFormsDB
             this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator8";
             this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 33);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripComboBox2
+            // 
+            this.toolStripComboBox2.Items.AddRange(new object[] {
+            "all",
+            "paid",
+            "not paid"});
+            this.toolStripComboBox2.Name = "toolStripComboBox2";
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 33);
+            // 
             // dataGridView3
             // 
             this.dataGridView3.AutoGenerateColumns = false;
@@ -697,6 +806,64 @@ namespace WindowsFormsDB
             this.dataGridView3.RowTemplate.Height = 28;
             this.dataGridView3.Size = new System.Drawing.Size(1304, 339);
             this.dataGridView3.TabIndex = 0;
+            // 
+            // paymentIdDataGridViewTextBoxColumn
+            // 
+            this.paymentIdDataGridViewTextBoxColumn.DataPropertyName = "paymentId";
+            this.paymentIdDataGridViewTextBoxColumn.HeaderText = "paymentId";
+            this.paymentIdDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.paymentIdDataGridViewTextBoxColumn.Name = "paymentIdDataGridViewTextBoxColumn";
+            this.paymentIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paymentIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentIdDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // excursionIdDataGridViewTextBoxColumn1
+            // 
+            this.excursionIdDataGridViewTextBoxColumn1.DataPropertyName = "excursionId";
+            this.excursionIdDataGridViewTextBoxColumn1.DataSource = this.excursionBindingSource;
+            this.excursionIdDataGridViewTextBoxColumn1.DisplayMember = "excursionId";
+            this.excursionIdDataGridViewTextBoxColumn1.HeaderText = "excursionId";
+            this.excursionIdDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.excursionIdDataGridViewTextBoxColumn1.Name = "excursionIdDataGridViewTextBoxColumn1";
+            this.excursionIdDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.excursionIdDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.excursionIdDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // clientIdDataGridViewTextBoxColumn1
+            // 
+            this.clientIdDataGridViewTextBoxColumn1.DataPropertyName = "clientId";
+            this.clientIdDataGridViewTextBoxColumn1.DataSource = this.clientBindingSource;
+            this.clientIdDataGridViewTextBoxColumn1.DisplayMember = "clientId";
+            this.clientIdDataGridViewTextBoxColumn1.HeaderText = "clientId";
+            this.clientIdDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.clientIdDataGridViewTextBoxColumn1.Name = "clientIdDataGridViewTextBoxColumn1";
+            this.clientIdDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clientIdDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clientIdDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // isPaidDataGridViewCheckBoxColumn
+            // 
+            this.isPaidDataGridViewCheckBoxColumn.DataPropertyName = "isPaid";
+            this.isPaidDataGridViewCheckBoxColumn.HeaderText = "isPaid";
+            this.isPaidDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            this.isPaidDataGridViewCheckBoxColumn.Name = "isPaidDataGridViewCheckBoxColumn";
+            this.isPaidDataGridViewCheckBoxColumn.Width = 150;
+            // 
+            // paidDataGridViewTextBoxColumn
+            // 
+            this.paidDataGridViewTextBoxColumn.DataPropertyName = "paid";
+            this.paidDataGridViewTextBoxColumn.HeaderText = "paid";
+            this.paidDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.paidDataGridViewTextBoxColumn.Name = "paidDataGridViewTextBoxColumn";
+            this.paidDataGridViewTextBoxColumn.Width = 150;
             // 
             // tabPage4
             // 
@@ -729,6 +896,73 @@ namespace WindowsFormsDB
             this.dataGridView4.RowTemplate.Height = 28;
             this.dataGridView4.Size = new System.Drawing.Size(1307, 368);
             this.dataGridView4.TabIndex = 1;
+            // 
+            // busIdDataGridViewTextBoxColumn
+            // 
+            this.busIdDataGridViewTextBoxColumn.DataPropertyName = "busId";
+            this.busIdDataGridViewTextBoxColumn.HeaderText = "busId";
+            this.busIdDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.busIdDataGridViewTextBoxColumn.Name = "busIdDataGridViewTextBoxColumn";
+            this.busIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.busIdDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // capacityDataGridViewTextBoxColumn
+            // 
+            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "capacity";
+            this.capacityDataGridViewTextBoxColumn.HeaderText = "capacity";
+            this.capacityDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
+            this.capacityDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // isOnGoingDataGridViewCheckBoxColumn
+            // 
+            this.isOnGoingDataGridViewCheckBoxColumn.DataPropertyName = "isOnGoing";
+            this.isOnGoingDataGridViewCheckBoxColumn.HeaderText = "isOnGoing";
+            this.isOnGoingDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            this.isOnGoingDataGridViewCheckBoxColumn.Name = "isOnGoingDataGridViewCheckBoxColumn";
+            this.isOnGoingDataGridViewCheckBoxColumn.Width = 150;
+            // 
+            // markDataGridViewTextBoxColumn
+            // 
+            this.markDataGridViewTextBoxColumn.DataPropertyName = "mark";
+            this.markDataGridViewTextBoxColumn.DataSource = this.busMarkBindingSource;
+            this.markDataGridViewTextBoxColumn.DisplayMember = "markName";
+            this.markDataGridViewTextBoxColumn.HeaderText = "mark";
+            this.markDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
+            this.markDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.markDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.markDataGridViewTextBoxColumn.ValueMember = "markId";
+            this.markDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // busMarkBindingSource
+            // 
+            this.busMarkBindingSource.DataMember = "BusMark";
+            this.busMarkBindingSource.DataSource = this.excursions1DataSet;
+            // 
+            // numberPlateDataGridViewTextBoxColumn
+            // 
+            this.numberPlateDataGridViewTextBoxColumn.DataPropertyName = "numberPlate";
+            this.numberPlateDataGridViewTextBoxColumn.HeaderText = "numberPlate";
+            this.numberPlateDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.numberPlateDataGridViewTextBoxColumn.Name = "numberPlateDataGridViewTextBoxColumn";
+            this.numberPlateDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "color";
+            this.colorDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.colorDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // consumptionDataGridViewTextBoxColumn
+            // 
+            this.consumptionDataGridViewTextBoxColumn.DataPropertyName = "consumption";
+            this.consumptionDataGridViewTextBoxColumn.HeaderText = "consumption";
+            this.consumptionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.consumptionDataGridViewTextBoxColumn.Name = "consumptionDataGridViewTextBoxColumn";
+            this.consumptionDataGridViewTextBoxColumn.Width = 150;
             // 
             // busBindingSource
             // 
@@ -852,6 +1086,19 @@ namespace WindowsFormsDB
             // 
             this.bindingNavigatorSeparator11.Name = "bindingNavigatorSeparator11";
             this.bindingNavigatorSeparator11.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripComboBox4
+            // 
+            this.toolStripComboBox4.Items.AddRange(new object[] {
+            "all",
+            "free"});
+            this.toolStripComboBox4.Name = "toolStripComboBox4";
+            this.toolStripComboBox4.Size = new System.Drawing.Size(121, 33);
             // 
             // tabPage5
             // 
@@ -987,6 +1234,19 @@ namespace WindowsFormsDB
             this.bindingNavigatorSeparator14.Name = "bindingNavigatorSeparator14";
             this.bindingNavigatorSeparator14.Size = new System.Drawing.Size(6, 33);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripComboBox3
+            // 
+            this.toolStripComboBox3.Items.AddRange(new object[] {
+            "all",
+            "free"});
+            this.toolStripComboBox3.Name = "toolStripComboBox3";
+            this.toolStripComboBox3.Size = new System.Drawing.Size(121, 33);
+            // 
             // dataGridView5
             // 
             this.dataGridView5.AutoGenerateColumns = false;
@@ -1006,261 +1266,11 @@ namespace WindowsFormsDB
             this.dataGridView5.Size = new System.Drawing.Size(1299, 353);
             this.dataGridView5.TabIndex = 0;
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.label1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 29);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1310, 506);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Income statistics";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // excursionTableAdapter
-            // 
-            this.excursionTableAdapter.ClearBeforeFill = true;
-            // 
-            // clientTableAdapter
-            // 
-            this.clientTableAdapter.ClearBeforeFill = true;
-            // 
-            // paymentTableAdapter
-            // 
-            this.paymentTableAdapter.ClearBeforeFill = true;
-            // 
-            // busTableAdapter
-            // 
-            this.busTableAdapter.ClearBeforeFill = true;
-            // 
-            // driverTableAdapter
-            // 
-            this.driverTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.excursionIdDataGridViewTextBoxColumn,
-            this.startDateDataGridViewTextBoxColumn,
-            this.durationDataGridViewTextBoxColumn,
-            this.distanceKMDataGridViewTextBoxColumn,
-            this.countOfCustomersDataGridViewTextBoxColumn,
-            this.excursionTypeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.excursionBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1304, 381);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Total income:";
-            // 
-            // excursionTypeBindingSource
-            // 
-            this.excursionTypeBindingSource.DataMember = "ExcursionType";
-            this.excursionTypeBindingSource.DataSource = this.excursions1DataSet;
-            // 
-            // excursionTypeTableAdapter
-            // 
-            this.excursionTypeTableAdapter.ClearBeforeFill = true;
-            // 
-            // paymentIdDataGridViewTextBoxColumn
-            // 
-            this.paymentIdDataGridViewTextBoxColumn.DataPropertyName = "paymentId";
-            this.paymentIdDataGridViewTextBoxColumn.HeaderText = "paymentId";
-            this.paymentIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.paymentIdDataGridViewTextBoxColumn.Name = "paymentIdDataGridViewTextBoxColumn";
-            this.paymentIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.paymentIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.paymentIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // excursionIdDataGridViewTextBoxColumn1
-            // 
-            this.excursionIdDataGridViewTextBoxColumn1.DataPropertyName = "excursionId";
-            this.excursionIdDataGridViewTextBoxColumn1.DataSource = this.excursionBindingSource;
-            this.excursionIdDataGridViewTextBoxColumn1.DisplayMember = "excursionId";
-            this.excursionIdDataGridViewTextBoxColumn1.HeaderText = "excursionId";
-            this.excursionIdDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.excursionIdDataGridViewTextBoxColumn1.Name = "excursionIdDataGridViewTextBoxColumn1";
-            this.excursionIdDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.excursionIdDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.excursionIdDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // clientIdDataGridViewTextBoxColumn1
-            // 
-            this.clientIdDataGridViewTextBoxColumn1.DataPropertyName = "clientId";
-            this.clientIdDataGridViewTextBoxColumn1.DataSource = this.clientBindingSource;
-            this.clientIdDataGridViewTextBoxColumn1.DisplayMember = "clientId";
-            this.clientIdDataGridViewTextBoxColumn1.HeaderText = "clientId";
-            this.clientIdDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.clientIdDataGridViewTextBoxColumn1.Name = "clientIdDataGridViewTextBoxColumn1";
-            this.clientIdDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clientIdDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.clientIdDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // isPaidDataGridViewCheckBoxColumn
-            // 
-            this.isPaidDataGridViewCheckBoxColumn.DataPropertyName = "isPaid";
-            this.isPaidDataGridViewCheckBoxColumn.HeaderText = "isPaid";
-            this.isPaidDataGridViewCheckBoxColumn.MinimumWidth = 8;
-            this.isPaidDataGridViewCheckBoxColumn.Name = "isPaidDataGridViewCheckBoxColumn";
-            this.isPaidDataGridViewCheckBoxColumn.Width = 150;
-            // 
-            // paidDataGridViewTextBoxColumn
-            // 
-            this.paidDataGridViewTextBoxColumn.DataPropertyName = "paid";
-            this.paidDataGridViewTextBoxColumn.HeaderText = "paid";
-            this.paidDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.paidDataGridViewTextBoxColumn.Name = "paidDataGridViewTextBoxColumn";
-            this.paidDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // busMarkBindingSource
-            // 
-            this.busMarkBindingSource.DataMember = "BusMark";
-            this.busMarkBindingSource.DataSource = this.excursions1DataSet;
-            // 
-            // busMarkTableAdapter
-            // 
-            this.busMarkTableAdapter.ClearBeforeFill = true;
-            // 
-            // busIdDataGridViewTextBoxColumn
-            // 
-            this.busIdDataGridViewTextBoxColumn.DataPropertyName = "busId";
-            this.busIdDataGridViewTextBoxColumn.HeaderText = "busId";
-            this.busIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.busIdDataGridViewTextBoxColumn.Name = "busIdDataGridViewTextBoxColumn";
-            this.busIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.busIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // capacityDataGridViewTextBoxColumn
-            // 
-            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "capacity";
-            this.capacityDataGridViewTextBoxColumn.HeaderText = "capacity";
-            this.capacityDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
-            this.capacityDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // isOnGoingDataGridViewCheckBoxColumn
-            // 
-            this.isOnGoingDataGridViewCheckBoxColumn.DataPropertyName = "isOnGoing";
-            this.isOnGoingDataGridViewCheckBoxColumn.HeaderText = "isOnGoing";
-            this.isOnGoingDataGridViewCheckBoxColumn.MinimumWidth = 8;
-            this.isOnGoingDataGridViewCheckBoxColumn.Name = "isOnGoingDataGridViewCheckBoxColumn";
-            this.isOnGoingDataGridViewCheckBoxColumn.Width = 150;
-            // 
-            // markDataGridViewTextBoxColumn
-            // 
-            this.markDataGridViewTextBoxColumn.DataPropertyName = "mark";
-            this.markDataGridViewTextBoxColumn.DataSource = this.busMarkBindingSource;
-            this.markDataGridViewTextBoxColumn.DisplayMember = "markName";
-            this.markDataGridViewTextBoxColumn.HeaderText = "mark";
-            this.markDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
-            this.markDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.markDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.markDataGridViewTextBoxColumn.ValueMember = "markId";
-            this.markDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // numberPlateDataGridViewTextBoxColumn
-            // 
-            this.numberPlateDataGridViewTextBoxColumn.DataPropertyName = "numberPlate";
-            this.numberPlateDataGridViewTextBoxColumn.HeaderText = "numberPlate";
-            this.numberPlateDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.numberPlateDataGridViewTextBoxColumn.Name = "numberPlateDataGridViewTextBoxColumn";
-            this.numberPlateDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // colorDataGridViewTextBoxColumn
-            // 
-            this.colorDataGridViewTextBoxColumn.DataPropertyName = "color";
-            this.colorDataGridViewTextBoxColumn.HeaderText = "color";
-            this.colorDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
-            this.colorDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // consumptionDataGridViewTextBoxColumn
-            // 
-            this.consumptionDataGridViewTextBoxColumn.DataPropertyName = "consumption";
-            this.consumptionDataGridViewTextBoxColumn.HeaderText = "consumption";
-            this.consumptionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.consumptionDataGridViewTextBoxColumn.Name = "consumptionDataGridViewTextBoxColumn";
-            this.consumptionDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // excursionIdDataGridViewTextBoxColumn
-            // 
-            this.excursionIdDataGridViewTextBoxColumn.DataPropertyName = "excursionId";
-            this.excursionIdDataGridViewTextBoxColumn.HeaderText = "excursionId";
-            this.excursionIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.excursionIdDataGridViewTextBoxColumn.Name = "excursionIdDataGridViewTextBoxColumn";
-            this.excursionIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.excursionIdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "startDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "startDate";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // durationDataGridViewTextBoxColumn
-            // 
-            this.durationDataGridViewTextBoxColumn.DataPropertyName = "duration";
-            this.durationDataGridViewTextBoxColumn.HeaderText = "duration";
-            this.durationDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.durationDataGridViewTextBoxColumn.Name = "durationDataGridViewTextBoxColumn";
-            this.durationDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // distanceKMDataGridViewTextBoxColumn
-            // 
-            this.distanceKMDataGridViewTextBoxColumn.DataPropertyName = "distanceKM";
-            this.distanceKMDataGridViewTextBoxColumn.HeaderText = "distanceKM";
-            this.distanceKMDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.distanceKMDataGridViewTextBoxColumn.Name = "distanceKMDataGridViewTextBoxColumn";
-            this.distanceKMDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // countOfCustomersDataGridViewTextBoxColumn
-            // 
-            this.countOfCustomersDataGridViewTextBoxColumn.DataPropertyName = "countOfCustomers";
-            this.countOfCustomersDataGridViewTextBoxColumn.HeaderText = "countOfCustomers";
-            this.countOfCustomersDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.countOfCustomersDataGridViewTextBoxColumn.Name = "countOfCustomersDataGridViewTextBoxColumn";
-            this.countOfCustomersDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // excursionTypeDataGridViewTextBoxColumn
-            // 
-            this.excursionTypeDataGridViewTextBoxColumn.DataPropertyName = "excursionType";
-            this.excursionTypeDataGridViewTextBoxColumn.DataSource = this.excursionTypeBindingSource;
-            this.excursionTypeDataGridViewTextBoxColumn.DisplayMember = "typeName";
-            this.excursionTypeDataGridViewTextBoxColumn.HeaderText = "excursionType";
-            this.excursionTypeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.excursionTypeDataGridViewTextBoxColumn.Name = "excursionTypeDataGridViewTextBoxColumn";
-            this.excursionTypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.excursionTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.excursionTypeDataGridViewTextBoxColumn.ValueMember = "typeId";
-            this.excursionTypeDataGridViewTextBoxColumn.Width = 150;
-            // 
             // driverIdDataGridViewTextBoxColumn
             // 
             this.driverIdDataGridViewTextBoxColumn.DataPropertyName = "driverId";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.driverIdDataGridViewTextBoxColumn.HeaderText = "driverId";
             this.driverIdDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.driverIdDataGridViewTextBoxColumn.Name = "driverIdDataGridViewTextBoxColumn";
@@ -1307,79 +1317,61 @@ namespace WindowsFormsDB
             this.isOnVocationDataGridViewCheckBoxColumn.Name = "isOnVocationDataGridViewCheckBoxColumn";
             this.isOnVocationDataGridViewCheckBoxColumn.Width = 150;
             // 
-            // toolStripSeparator1
+            // tabPage6
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.tabPage6.Controls.Add(this.label1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 29);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Income statistics";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // toolStripTextBox1
+            // label1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 33);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Total income:";
             // 
-            // toolStripButton1
+            // excursionTableAdapter
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton1.Text = "search";
+            this.excursionTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripSeparator2
+            // clientTableAdapter
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 33);
+            this.clientTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripComboBox1
+            // paymentTableAdapter
             // 
-            this.toolStripComboBox1.Items.AddRange(new object[] {
+            this.paymentTableAdapter.ClearBeforeFill = true;
+            // 
+            // busTableAdapter
+            // 
+            this.busTableAdapter.ClearBeforeFill = true;
+            // 
+            // driverTableAdapter
+            // 
+            this.driverTableAdapter.ClearBeforeFill = true;
+            // 
+            // excursionTypeTableAdapter
+            // 
+            this.excursionTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // busMarkTableAdapter
+            // 
+            this.busMarkTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripComboExc
+            // 
+            this.toolStripComboExc.Items.AddRange(new object[] {
             "all",
-            "with debts",
-            "without debts"});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 33);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripComboBox2
-            // 
-            this.toolStripComboBox2.Items.AddRange(new object[] {
-            "all",
-            "paid",
-            "not paid"});
-            this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 33);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripComboBox3
-            // 
-            this.toolStripComboBox3.Items.AddRange(new object[] {
-            "all",
-            "free"});
-            this.toolStripComboBox3.Name = "toolStripComboBox3";
-            this.toolStripComboBox3.Size = new System.Drawing.Size(121, 33);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripComboBox4
-            // 
-            this.toolStripComboBox4.Items.AddRange(new object[] {
-            "all",
-            "free"});
-            this.toolStripComboBox4.Name = "toolStripComboBox4";
-            this.toolStripComboBox4.Size = new System.Drawing.Size(121, 33);
+            "coming",
+            "finished"});
+            this.toolStripComboExc.Name = "toolStripComboExc";
+            this.toolStripComboExc.Size = new System.Drawing.Size(121, 33);
             // 
             // Menu
             // 
@@ -1393,11 +1385,13 @@ namespace WindowsFormsDB
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursionTypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
@@ -1415,6 +1409,7 @@ namespace WindowsFormsDB
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busMarkBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).EndInit();
             this.bindingNavigator4.ResumeLayout(false);
@@ -1428,9 +1423,6 @@ namespace WindowsFormsDB
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excursionTypeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.busMarkBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1556,8 +1548,6 @@ namespace WindowsFormsDB
         private System.Windows.Forms.DataGridViewTextBoxColumn driverLastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isOnVocationDataGridViewCheckBoxColumn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
@@ -1566,5 +1556,6 @@ namespace WindowsFormsDB
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox3;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboExc;
     }
 }
