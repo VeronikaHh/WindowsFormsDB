@@ -24,11 +24,8 @@ namespace WindowsFormsDB
 
         string ExcQuery;
 
-        DataSet dataset;
-
         DataTable datatable;
 
-        SqlDataAdapter sqladapter;
 
 
         public Menu()
@@ -124,38 +121,121 @@ namespace WindowsFormsDB
 
         private void toolStripComboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (toolStripComboBox5.SelectedItem != null)
-            //{
+            string selected = toolStripComboBox5.SelectedItem.ToString();
 
-            //    if (toolStripComboBox5.SelectedIndex == 0)
-            //    {
-            //        this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
-            //    }
-            //    else if (toolStripComboBox5.SelectedIndex == 2)
-            //    {
+            if (selected.Equals("all"))
+            {
+                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
+                dataGridView1.DataSource = this.excursions1DataSet.Excursion;
+            }
+            else if (selected.Equals("coming"))
+            {
+                using(var db = new Excursions1Context())
+                {
+                    var select = db.Excursions.Where(p=>p.startDate >= DateTime.Now).ToList();
+                    dataGridView1.DataSource = select;
+                }
+            }
+            else if (selected.Equals("finished"))
+            {
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Excursions.Where(p => p.startDate <= DateTime.Now).ToList();
+                    dataGridView1.DataSource = select;
+                }
+            }
+        }
+        // clients filter 
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = toolStripComboBox1.SelectedItem.ToString();
 
-            //        dataGridView1.BackColor = Color.Red;
-            //        DataView DV = new DataView(datatable);
+            if (selected.Equals("all"))
+            {
+                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
+                dataGridView1.DataSource = this.excursions1DataSet.Excursion;
+            }
+            else if (selected.Equals("with debts"))
+            {
+                //using (var db = new Excursions1Context())
+                //{
+                //    var select = db.Clients.Where(p => p.startDate >= DateTime.Now).ToList();
+                //    dataGridView1.DataSource = select;
+                //}
+            }
+            else if (selected.Equals("without debts"))
+            {
+                //using (var db = new Excursions1Context())
+                //{
+                //    var select = db.Excursions.Where(p => p.startDate <= DateTime.Now).ToList();
+                //    dataGridView1.DataSource = select;
+                //}
+            }
+        }
+        //payment filter
+        private void toolStripComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = toolStripComboBox2.SelectedItem.ToString();
 
-            //        ExcQuery = "SELECT * FROM Excursion WHERE startDate >= CAST(CURRENT_TIMESTAMP AS DATE)";
+            if (selected.Equals("all"))
+            {
+                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
+                dataGridView3.DataSource = this.excursions1DataSet.Excursion;
+            }
+            else if (selected.Equals("paid"))
+            {
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Payments.Where(p => p.isPaid == true).ToList();
+                    dataGridView3.DataSource = select;
+                }
+            }
+            else if (selected.Equals("not paid"))
+            {
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Payments.Where(p => p.isPaid == false).ToList();
+                    dataGridView3.DataSource = select;
+                }
+            }
+        }
 
-            //        DV.RowFilter = string.Format(ExcQuery);
+        private void toolStripComboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = toolStripComboBox4.SelectedItem.ToString();
 
-            //        dataGridView1.DataSource = DV;
-            //        //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
-            //    }
-            //    else if (toolStripComboBox5.SelectedIndex == 2)
-            //    {
-            //        DataView DV = new DataView(datatable);
+            if (selected.Equals("all"))
+            {
+                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
+                dataGridView3.DataSource = this.excursions1DataSet.Excursion;
+            }
+            else if (selected.Equals("free"))
+            {
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Buses.Where(p => p.isOnGoing == false).ToList();
+                    dataGridView4.DataSource = select;
+                }
+            }
+        }
 
-            //        ExcQuery = "SELECT * FROM Excursion WHERE startDate =< CAST(CURRENT_TIMESTAMP AS DATE)";
+        private void toolStripComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = toolStripComboBox3.SelectedItem.ToString();
 
-            //        DV.RowFilter = string.Format(ExcQuery);
-
-            //        dataGridView1.DataSource = DV;
-            //        // this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
-            //    }
-            //}
+            if (selected.Equals("all"))
+            {
+                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
+                dataGridView3.DataSource = this.excursions1DataSet.Excursion;
+            }
+            else if (selected.Equals("free"))
+            {
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Drivers.Where(p => p.isOnGoing == false&& p.isOnVocation == false).ToList();
+                    dataGridView4.DataSource = select;
+                }
+            }
         }
     }
 }

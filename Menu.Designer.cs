@@ -31,7 +31,7 @@ namespace WindowsFormsDB
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -698,6 +698,7 @@ namespace WindowsFormsDB
             "without debts"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(141, 33);
+            this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_SelectedIndexChanged);
             // 
             // dataGridView2
             // 
@@ -913,6 +914,7 @@ namespace WindowsFormsDB
             "not paid"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
             this.toolStripComboBox2.Size = new System.Drawing.Size(141, 33);
+            this.toolStripComboBox2.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox2_SelectedIndexChanged);
             // 
             // dataGridView3
             // 
@@ -1220,6 +1222,7 @@ namespace WindowsFormsDB
             "free"});
             this.toolStripComboBox4.Name = "toolStripComboBox4";
             this.toolStripComboBox4.Size = new System.Drawing.Size(141, 33);
+            this.toolStripComboBox4.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox4_SelectedIndexChanged);
             // 
             // tabPage5
             // 
@@ -1379,6 +1382,7 @@ namespace WindowsFormsDB
             "free"});
             this.toolStripComboBox3.Name = "toolStripComboBox3";
             this.toolStripComboBox3.Size = new System.Drawing.Size(141, 33);
+            this.toolStripComboBox3.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox3_SelectedIndexChanged);
             // 
             // dataGridView5
             // 
@@ -1403,8 +1407,8 @@ namespace WindowsFormsDB
             // driverIdDataGridViewTextBoxColumn
             // 
             this.driverIdDataGridViewTextBoxColumn.DataPropertyName = "driverId";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.driverIdDataGridViewTextBoxColumn.HeaderText = "driverId";
             this.driverIdDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.driverIdDataGridViewTextBoxColumn.Name = "driverIdDataGridViewTextBoxColumn";
