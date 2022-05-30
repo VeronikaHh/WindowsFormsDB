@@ -119,6 +119,7 @@ namespace WindowsFormsDB
             }
         }
 
+        //excursion filter
         private void toolStripComboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selected = toolStripComboBox5.SelectedItem.ToString();
@@ -145,6 +146,7 @@ namespace WindowsFormsDB
                 }
             }
         }
+
         // clients filter 
         private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -157,11 +159,21 @@ namespace WindowsFormsDB
             }
             else if (selected.Equals("with debts"))
             {
+
+                using (var db = new Excursions1Context())
+                {
+                    //var select = db.Clients.Join(db.Payments, cl => cl = db.Clients.clientId, pay=>pay= Payments.clientId, pay =>pay.Where(p => p.isPaid == true)).ToList();
+                    //dataGridView1.DataSource = select;
+                }
                 //using (var db = new Excursions1Context())
                 //{
-                //    var select = db.Clients.Where(p => p.startDate >= DateTime.Now).ToList();
+                //    var select = (from db.Clients
+                //                  join db.Payment in Excursions1Context on Client.clientId equals Payment.clientId
+                //                  where (p => p.isPaid == true)
+                //                  select Client).ToList();
                 //    dataGridView1.DataSource = select;
                 //}
+
             }
             else if (selected.Equals("without debts"))
             {
@@ -172,6 +184,7 @@ namespace WindowsFormsDB
                 //}
             }
         }
+
         //payment filter
         private void toolStripComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -200,6 +213,7 @@ namespace WindowsFormsDB
             }
         }
 
+        //bus filter
         private void toolStripComboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selected = toolStripComboBox4.SelectedItem.ToString();
@@ -219,6 +233,7 @@ namespace WindowsFormsDB
             }
         }
 
+        //drivers filter
         private void toolStripComboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selected = toolStripComboBox3.SelectedItem.ToString();

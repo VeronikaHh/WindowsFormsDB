@@ -31,7 +31,13 @@ namespace WindowsFormsDB
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -52,12 +58,6 @@ namespace WindowsFormsDB
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripComboBox5 = new System.Windows.Forms.ToolStripComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.excursionIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distanceKMDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countOfCustomersDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.excursionTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -242,6 +242,12 @@ namespace WindowsFormsDB
             this.excursionBusDriverTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionBusDriverTableAdapter();
             this.excursionClientTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionClientTableAdapter();
             this.excursionBusTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionBusTableAdapter();
+            this.excursionIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distanceKMDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countOfCustomersDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.excursionTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
@@ -299,6 +305,8 @@ namespace WindowsFormsDB
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Font = new System.Drawing.Font("Rockwell", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.ItemSize = new System.Drawing.Size(111, 35);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -307,15 +315,15 @@ namespace WindowsFormsDB
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.bindingNavigator2);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage1.Size = new System.Drawing.Size(1310, 496);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Excursions";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // bindingNavigator2
             // 
@@ -494,57 +502,14 @@ namespace WindowsFormsDB
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView1_EditingControlShowing);
             // 
-            // excursionIdDataGridViewTextBoxColumn2
-            // 
-            this.excursionIdDataGridViewTextBoxColumn2.DataPropertyName = "excursionId";
-            this.excursionIdDataGridViewTextBoxColumn2.HeaderText = "excursionId";
-            this.excursionIdDataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.excursionIdDataGridViewTextBoxColumn2.Name = "excursionIdDataGridViewTextBoxColumn2";
-            this.excursionIdDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // startDateDataGridViewTextBoxColumn1
-            // 
-            this.startDateDataGridViewTextBoxColumn1.DataPropertyName = "startDate";
-            this.startDateDataGridViewTextBoxColumn1.HeaderText = "startDate";
-            this.startDateDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.startDateDataGridViewTextBoxColumn1.Name = "startDateDataGridViewTextBoxColumn1";
-            // 
-            // durationDataGridViewTextBoxColumn1
-            // 
-            this.durationDataGridViewTextBoxColumn1.DataPropertyName = "duration";
-            this.durationDataGridViewTextBoxColumn1.HeaderText = "duration";
-            this.durationDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.durationDataGridViewTextBoxColumn1.Name = "durationDataGridViewTextBoxColumn1";
-            // 
-            // distanceKMDataGridViewTextBoxColumn1
-            // 
-            this.distanceKMDataGridViewTextBoxColumn1.DataPropertyName = "distanceKM";
-            this.distanceKMDataGridViewTextBoxColumn1.HeaderText = "distanceKM";
-            this.distanceKMDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.distanceKMDataGridViewTextBoxColumn1.Name = "distanceKMDataGridViewTextBoxColumn1";
-            // 
-            // countOfCustomersDataGridViewTextBoxColumn1
-            // 
-            this.countOfCustomersDataGridViewTextBoxColumn1.DataPropertyName = "countOfCustomers";
-            this.countOfCustomersDataGridViewTextBoxColumn1.HeaderText = "countOfCustomers";
-            this.countOfCustomersDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.countOfCustomersDataGridViewTextBoxColumn1.Name = "countOfCustomersDataGridViewTextBoxColumn1";
-            // 
-            // excursionTypeDataGridViewTextBoxColumn1
-            // 
-            this.excursionTypeDataGridViewTextBoxColumn1.DataPropertyName = "excursionType";
-            this.excursionTypeDataGridViewTextBoxColumn1.HeaderText = "excursionType";
-            this.excursionTypeDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.excursionTypeDataGridViewTextBoxColumn1.Name = "excursionTypeDataGridViewTextBoxColumn1";
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.bindingNavigator1);
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage2.Size = new System.Drawing.Size(1310, 496);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Clients";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -759,10 +724,10 @@ namespace WindowsFormsDB
             // 
             this.tabPage3.Controls.Add(this.bindingNavigator3);
             this.tabPage3.Controls.Add(this.dataGridView3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 31);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage3.Size = new System.Drawing.Size(1310, 504);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Payments";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -986,10 +951,10 @@ namespace WindowsFormsDB
             // 
             this.tabPage4.Controls.Add(this.dataGridView4);
             this.tabPage4.Controls.Add(this.bindingNavigator4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 31);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage4.Size = new System.Drawing.Size(1310, 504);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Buses";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1228,9 +1193,9 @@ namespace WindowsFormsDB
             // 
             this.tabPage5.Controls.Add(this.bindingNavigator5);
             this.tabPage5.Controls.Add(this.dataGridView5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Location = new System.Drawing.Point(4, 31);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage5.Size = new System.Drawing.Size(1310, 504);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Drivers";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1407,8 +1372,8 @@ namespace WindowsFormsDB
             // driverIdDataGridViewTextBoxColumn
             // 
             this.driverIdDataGridViewTextBoxColumn.DataPropertyName = "driverId";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.driverIdDataGridViewTextBoxColumn.HeaderText = "driverId";
             this.driverIdDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.driverIdDataGridViewTextBoxColumn.Name = "driverIdDataGridViewTextBoxColumn";
@@ -1453,10 +1418,10 @@ namespace WindowsFormsDB
             // 
             this.tabPage6.Controls.Add(this.bindingNavigator6);
             this.tabPage6.Controls.Add(this.dataGridView6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 29);
+            this.tabPage6.Location = new System.Drawing.Point(4, 31);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage6.Size = new System.Drawing.Size(1310, 504);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "ExcursionBusDriver";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1646,10 +1611,10 @@ namespace WindowsFormsDB
             // 
             this.tabPage7.Controls.Add(this.bindingNavigator7);
             this.tabPage7.Controls.Add(this.dataGridView7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 29);
+            this.tabPage7.Location = new System.Drawing.Point(4, 31);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage7.Size = new System.Drawing.Size(1310, 504);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "ExcursionClient";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1839,9 +1804,9 @@ namespace WindowsFormsDB
             // 
             this.tabPage8.Controls.Add(this.bindingNavigator8);
             this.tabPage8.Controls.Add(this.dataGridView8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 29);
+            this.tabPage8.Location = new System.Drawing.Point(4, 31);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage8.Size = new System.Drawing.Size(1310, 504);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "ExcursionBus";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -2025,9 +1990,9 @@ namespace WindowsFormsDB
             // 
             // tabPage9
             // 
-            this.tabPage9.Location = new System.Drawing.Point(4, 29);
+            this.tabPage9.Location = new System.Drawing.Point(4, 31);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1310, 506);
+            this.tabPage9.Size = new System.Drawing.Size(1310, 504);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Income statistics";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -2228,6 +2193,61 @@ namespace WindowsFormsDB
             // 
             this.excursionBusTableAdapter.ClearBeforeFill = true;
             // 
+            // excursionIdDataGridViewTextBoxColumn2
+            // 
+            this.excursionIdDataGridViewTextBoxColumn2.DataPropertyName = "excursionId";
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.excursionIdDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle8;
+            this.excursionIdDataGridViewTextBoxColumn2.HeaderText = "excursionId";
+            this.excursionIdDataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.excursionIdDataGridViewTextBoxColumn2.Name = "excursionIdDataGridViewTextBoxColumn2";
+            this.excursionIdDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // startDateDataGridViewTextBoxColumn1
+            // 
+            this.startDateDataGridViewTextBoxColumn1.DataPropertyName = "startDate";
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.startDateDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.startDateDataGridViewTextBoxColumn1.HeaderText = "startDate";
+            this.startDateDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.startDateDataGridViewTextBoxColumn1.Name = "startDateDataGridViewTextBoxColumn1";
+            // 
+            // durationDataGridViewTextBoxColumn1
+            // 
+            this.durationDataGridViewTextBoxColumn1.DataPropertyName = "duration";
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.durationDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.durationDataGridViewTextBoxColumn1.HeaderText = "duration";
+            this.durationDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.durationDataGridViewTextBoxColumn1.Name = "durationDataGridViewTextBoxColumn1";
+            // 
+            // distanceKMDataGridViewTextBoxColumn1
+            // 
+            this.distanceKMDataGridViewTextBoxColumn1.DataPropertyName = "distanceKM";
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.distanceKMDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle11;
+            this.distanceKMDataGridViewTextBoxColumn1.HeaderText = "distanceKM";
+            this.distanceKMDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.distanceKMDataGridViewTextBoxColumn1.Name = "distanceKMDataGridViewTextBoxColumn1";
+            // 
+            // countOfCustomersDataGridViewTextBoxColumn1
+            // 
+            this.countOfCustomersDataGridViewTextBoxColumn1.DataPropertyName = "countOfCustomers";
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.countOfCustomersDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.countOfCustomersDataGridViewTextBoxColumn1.HeaderText = "countOfCustomers";
+            this.countOfCustomersDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.countOfCustomersDataGridViewTextBoxColumn1.Name = "countOfCustomersDataGridViewTextBoxColumn1";
+            // 
+            // excursionTypeDataGridViewTextBoxColumn1
+            // 
+            this.excursionTypeDataGridViewTextBoxColumn1.DataPropertyName = "excursionType";
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.excursionTypeDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle13;
+            this.excursionTypeDataGridViewTextBoxColumn1.HeaderText = "excursionType";
+            this.excursionTypeDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.excursionTypeDataGridViewTextBoxColumn1.Name = "excursionTypeDataGridViewTextBoxColumn1";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2403,12 +2423,6 @@ namespace WindowsFormsDB
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox3;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn excursionIdDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn distanceKMDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countOfCustomersDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn excursionTypeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
@@ -2513,5 +2527,11 @@ namespace WindowsFormsDB
         private System.Windows.Forms.ToolStripButton saveToolStripButton5;
         private System.Windows.Forms.ToolStripButton saveToolStripButton6;
         private System.Windows.Forms.ToolStripButton saveToolStripButton7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn excursionIdDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn distanceKMDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countOfCustomersDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn excursionTypeDataGridViewTextBoxColumn1;
     }
 }
