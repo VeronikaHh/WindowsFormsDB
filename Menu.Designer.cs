@@ -30,14 +30,14 @@ namespace WindowsFormsDB
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -514,8 +514,8 @@ namespace WindowsFormsDB
             // excursionIdDataGridViewTextBoxColumn2
             // 
             this.excursionIdDataGridViewTextBoxColumn2.DataPropertyName = "excursionId";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.excursionIdDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.excursionIdDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle15;
             this.excursionIdDataGridViewTextBoxColumn2.HeaderText = "excursionId";
             this.excursionIdDataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.excursionIdDataGridViewTextBoxColumn2.Name = "excursionIdDataGridViewTextBoxColumn2";
@@ -524,8 +524,8 @@ namespace WindowsFormsDB
             // startDateDataGridViewTextBoxColumn1
             // 
             this.startDateDataGridViewTextBoxColumn1.DataPropertyName = "startDate";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.startDateDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.startDateDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle16;
             this.startDateDataGridViewTextBoxColumn1.HeaderText = "startDate";
             this.startDateDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.startDateDataGridViewTextBoxColumn1.Name = "startDateDataGridViewTextBoxColumn1";
@@ -533,8 +533,8 @@ namespace WindowsFormsDB
             // durationDataGridViewTextBoxColumn1
             // 
             this.durationDataGridViewTextBoxColumn1.DataPropertyName = "duration";
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.durationDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.durationDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle17;
             this.durationDataGridViewTextBoxColumn1.HeaderText = "duration";
             this.durationDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.durationDataGridViewTextBoxColumn1.Name = "durationDataGridViewTextBoxColumn1";
@@ -542,8 +542,8 @@ namespace WindowsFormsDB
             // distanceKMDataGridViewTextBoxColumn1
             // 
             this.distanceKMDataGridViewTextBoxColumn1.DataPropertyName = "distanceKM";
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.distanceKMDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.distanceKMDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle18;
             this.distanceKMDataGridViewTextBoxColumn1.HeaderText = "distanceKM";
             this.distanceKMDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.distanceKMDataGridViewTextBoxColumn1.Name = "distanceKMDataGridViewTextBoxColumn1";
@@ -551,8 +551,8 @@ namespace WindowsFormsDB
             // countOfCustomersDataGridViewTextBoxColumn1
             // 
             this.countOfCustomersDataGridViewTextBoxColumn1.DataPropertyName = "countOfCustomers";
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.countOfCustomersDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.countOfCustomersDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle19;
             this.countOfCustomersDataGridViewTextBoxColumn1.HeaderText = "countOfCustomers";
             this.countOfCustomersDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.countOfCustomersDataGridViewTextBoxColumn1.Name = "countOfCustomersDataGridViewTextBoxColumn1";
@@ -560,8 +560,8 @@ namespace WindowsFormsDB
             // excursionTypeDataGridViewTextBoxColumn1
             // 
             this.excursionTypeDataGridViewTextBoxColumn1.DataPropertyName = "excursionType";
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.excursionTypeDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.excursionTypeDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle20;
             this.excursionTypeDataGridViewTextBoxColumn1.HeaderText = "excursionType";
             this.excursionTypeDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.excursionTypeDataGridViewTextBoxColumn1.Name = "excursionTypeDataGridViewTextBoxColumn1";
@@ -1436,8 +1436,8 @@ namespace WindowsFormsDB
             // driverIdDataGridViewTextBoxColumn
             // 
             this.driverIdDataGridViewTextBoxColumn.DataPropertyName = "driverId";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
             this.driverIdDataGridViewTextBoxColumn.HeaderText = "driverId";
             this.driverIdDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.driverIdDataGridViewTextBoxColumn.Name = "driverIdDataGridViewTextBoxColumn";
@@ -2268,7 +2268,8 @@ namespace WindowsFormsDB
             // button1
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Location = new System.Drawing.Point(358, 80);
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(358, 46);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 160);
             this.button1.TabIndex = 0;
@@ -2277,7 +2278,8 @@ namespace WindowsFormsDB
             // button2
             // 
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.Location = new System.Drawing.Point(715, 80);
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(715, 46);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(165, 160);
             this.button2.TabIndex = 1;
@@ -2286,7 +2288,8 @@ namespace WindowsFormsDB
             // button3
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.Location = new System.Drawing.Point(358, 305);
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(358, 269);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(165, 160);
             this.button3.TabIndex = 2;
@@ -2295,7 +2298,8 @@ namespace WindowsFormsDB
             // button4
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.Location = new System.Drawing.Point(715, 305);
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(715, 269);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(165, 160);
             this.button4.TabIndex = 3;
@@ -2304,7 +2308,7 @@ namespace WindowsFormsDB
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(302, 218);
+            this.label1.Location = new System.Drawing.Point(302, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(290, 22);
             this.label1.TabIndex = 4;
@@ -2313,7 +2317,7 @@ namespace WindowsFormsDB
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(700, 218);
+            this.label2.Location = new System.Drawing.Point(702, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 22);
             this.label2.TabIndex = 5;
@@ -2322,7 +2326,7 @@ namespace WindowsFormsDB
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(302, 454);
+            this.label3.Location = new System.Drawing.Point(302, 420);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(301, 22);
             this.label3.TabIndex = 6;
@@ -2331,7 +2335,7 @@ namespace WindowsFormsDB
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(658, 454);
+            this.label4.Location = new System.Drawing.Point(658, 420);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(279, 22);
             this.label4.TabIndex = 7;
