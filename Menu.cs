@@ -252,5 +252,31 @@ namespace WindowsFormsDB
                 }
             }
         }
+
+
+        //statistics buttons
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExcursionForPeriod exc = new ExcursionForPeriod();
+            exc.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BusSchedule busSchedule = new BusSchedule();
+            busSchedule.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CustomerPay customerPay = new CustomerPay();
+            customerPay.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FinReport finReport = new FinReport();
+            finReport.ShowDialog();
+        }
     }
 }

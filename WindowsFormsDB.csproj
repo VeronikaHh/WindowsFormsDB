@@ -60,8 +60,20 @@
     <Compile Include="BusMark.cs">
       <DependentUpon>Excursion.tt</DependentUpon>
     </Compile>
+    <Compile Include="BusSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusSchedule.Designer.cs">
+      <DependentUpon>BusSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>Excursion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerPay.Designer.cs">
+      <DependentUpon>CustomerPay.cs</DependentUpon>
     </Compile>
     <Compile Include="Driver.cs">
       <DependentUpon>Excursion.tt</DependentUpon>
@@ -100,6 +112,12 @@
     <Compile Include="ExcursionClient.cs">
       <DependentUpon>Excursion.tt</DependentUpon>
     </Compile>
+    <Compile Include="ExcursionForPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcursionForPeriod.Designer.cs">
+      <DependentUpon>ExcursionForPeriod.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExcursionModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,6 +130,12 @@
     </Compile>
     <Compile Include="ExcursionType.cs">
       <DependentUpon>Excursion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinReport.Designer.cs">
+      <DependentUpon>FinReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -139,6 +163,9 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Excursion.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ExcursionForPeriod.resx">
+      <DependentUpon>ExcursionForPeriod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

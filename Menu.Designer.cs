@@ -30,13 +30,13 @@ namespace WindowsFormsDB
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -514,8 +514,8 @@ namespace WindowsFormsDB
             // excursionIdDataGridViewTextBoxColumn2
             // 
             this.excursionIdDataGridViewTextBoxColumn2.DataPropertyName = "excursionId";
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.excursionIdDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.excursionIdDataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle8;
             this.excursionIdDataGridViewTextBoxColumn2.HeaderText = "excursionId";
             this.excursionIdDataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.excursionIdDataGridViewTextBoxColumn2.Name = "excursionIdDataGridViewTextBoxColumn2";
@@ -524,8 +524,8 @@ namespace WindowsFormsDB
             // startDateDataGridViewTextBoxColumn1
             // 
             this.startDateDataGridViewTextBoxColumn1.DataPropertyName = "startDate";
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.startDateDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.startDateDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
             this.startDateDataGridViewTextBoxColumn1.HeaderText = "startDate";
             this.startDateDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.startDateDataGridViewTextBoxColumn1.Name = "startDateDataGridViewTextBoxColumn1";
@@ -533,8 +533,8 @@ namespace WindowsFormsDB
             // durationDataGridViewTextBoxColumn1
             // 
             this.durationDataGridViewTextBoxColumn1.DataPropertyName = "duration";
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.durationDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.durationDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
             this.durationDataGridViewTextBoxColumn1.HeaderText = "duration";
             this.durationDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.durationDataGridViewTextBoxColumn1.Name = "durationDataGridViewTextBoxColumn1";
@@ -542,8 +542,8 @@ namespace WindowsFormsDB
             // distanceKMDataGridViewTextBoxColumn1
             // 
             this.distanceKMDataGridViewTextBoxColumn1.DataPropertyName = "distanceKM";
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.distanceKMDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.distanceKMDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle11;
             this.distanceKMDataGridViewTextBoxColumn1.HeaderText = "distanceKM";
             this.distanceKMDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.distanceKMDataGridViewTextBoxColumn1.Name = "distanceKMDataGridViewTextBoxColumn1";
@@ -551,8 +551,8 @@ namespace WindowsFormsDB
             // countOfCustomersDataGridViewTextBoxColumn1
             // 
             this.countOfCustomersDataGridViewTextBoxColumn1.DataPropertyName = "countOfCustomers";
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.countOfCustomersDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.countOfCustomersDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle12;
             this.countOfCustomersDataGridViewTextBoxColumn1.HeaderText = "countOfCustomers";
             this.countOfCustomersDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.countOfCustomersDataGridViewTextBoxColumn1.Name = "countOfCustomersDataGridViewTextBoxColumn1";
@@ -560,8 +560,8 @@ namespace WindowsFormsDB
             // excursionTypeDataGridViewTextBoxColumn1
             // 
             this.excursionTypeDataGridViewTextBoxColumn1.DataPropertyName = "excursionType";
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.excursionTypeDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.excursionTypeDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle13;
             this.excursionTypeDataGridViewTextBoxColumn1.HeaderText = "excursionType";
             this.excursionTypeDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.excursionTypeDataGridViewTextBoxColumn1.Name = "excursionTypeDataGridViewTextBoxColumn1";
@@ -1436,8 +1436,8 @@ namespace WindowsFormsDB
             // driverIdDataGridViewTextBoxColumn
             // 
             this.driverIdDataGridViewTextBoxColumn.DataPropertyName = "driverId";
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            this.driverIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.driverIdDataGridViewTextBoxColumn.HeaderText = "driverId";
             this.driverIdDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.driverIdDataGridViewTextBoxColumn.Name = "driverIdDataGridViewTextBoxColumn";
@@ -2274,6 +2274,7 @@ namespace WindowsFormsDB
             this.button1.Size = new System.Drawing.Size(165, 160);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -2284,6 +2285,7 @@ namespace WindowsFormsDB
             this.button2.Size = new System.Drawing.Size(165, 160);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -2294,6 +2296,7 @@ namespace WindowsFormsDB
             this.button3.Size = new System.Drawing.Size(165, 160);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -2304,6 +2307,7 @@ namespace WindowsFormsDB
             this.button4.Size = new System.Drawing.Size(165, 160);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
