@@ -163,8 +163,17 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Excursion.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BusSchedule.resx">
+      <DependentUpon>BusSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPay.resx">
+      <DependentUpon>CustomerPay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExcursionForPeriod.resx">
       <DependentUpon>ExcursionForPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinReport.resx">
+      <DependentUpon>FinReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

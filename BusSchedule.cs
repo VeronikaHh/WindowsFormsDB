@@ -16,5 +16,12 @@ namespace WindowsFormsDB
         {
             InitializeComponent();
         }
+
+        private void BusSchedule_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'excursions1DataSet.ExcursionBusDriver' table. You can move, or remove it, as needed.
+            this.excursionBusDriverTableAdapter.Fill(this.excursions1DataSet.ExcursionBusDriver);
+
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace WindowsFormsDB
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,7 +38,6 @@ namespace WindowsFormsDB
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -219,6 +219,14 @@ namespace WindowsFormsDB
             this.excursionTypeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.excursionTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.excursionTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionTableAdapter();
             this.clientTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ClientTableAdapter();
             this.paymentTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.PaymentTableAdapter();
@@ -248,14 +256,6 @@ namespace WindowsFormsDB
             this.excursionBusDriverTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionBusDriverTableAdapter();
             this.excursionClientTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionClientTableAdapter();
             this.excursionBusTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionBusTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
@@ -363,7 +363,7 @@ namespace WindowsFormsDB
             this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem6;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem6;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1304, 33);
+            this.bindingNavigator2.Size = new System.Drawing.Size(1304, 38);
             this.bindingNavigator2.TabIndex = 4;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -373,7 +373,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorAddNewItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem6.Image")));
             this.bindingNavigatorAddNewItem6.Name = "bindingNavigatorAddNewItem6";
             this.bindingNavigatorAddNewItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem6.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem6.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem6.Text = "Add new";
             // 
             // excursionBindingSource
@@ -2069,6 +2069,86 @@ namespace WindowsFormsDB
             this.tabPage9.Text = "Income statistics";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(658, 420);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(279, 22);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Financial report for the month";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(302, 420);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(301, 22);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Customer\'s payment certificates";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(702, 184);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 22);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Bus usage schedule ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(302, 184);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(290, 22);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Excursions for a certain period";
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(715, 269);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(165, 160);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(358, 269);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(165, 160);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(715, 46);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(165, 160);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(358, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 160);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // excursionTableAdapter
             // 
             this.excursionTableAdapter.ClearBeforeFill = true;
@@ -2264,86 +2344,6 @@ namespace WindowsFormsDB
             // excursionBusTableAdapter
             // 
             this.excursionBusTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(358, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 160);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(715, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 160);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(358, 269);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 160);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(715, 269);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(165, 160);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(302, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 22);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Excursions for a certain period";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(702, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 22);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Bus usage schedule ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(302, 420);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(301, 22);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Customer\'s payment certificates";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(658, 420);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(279, 22);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Financial report for the month";
             // 
             // Menu
             // 

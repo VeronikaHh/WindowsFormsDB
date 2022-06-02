@@ -159,29 +159,27 @@ namespace WindowsFormsDB
             }
             else if (selected.Equals("with debts"))
             {
-
                 using (var db = new Excursions1Context())
                 {
-                    //var select = db.Clients.Join(db.Payments, cl => cl = db.Clients.clientId, pay=>pay= Payments.clientId, pay =>pay.Where(p => p.isPaid == true)).ToList();
-                    //dataGridView1.DataSource = select;
+                    var select = (from x in db.Clients.AsEnumerable()
+                                 join y in db.Payments.AsEnumerable()
+                                 on x.clientId equals y.clientId
+                                 where y.isPaid == false
+                                 select x).ToList();
+                    dataGridView1.DataSource = select;
                 }
-                //using (var db = new Excursions1Context())
-                //{
-                //    var select = (from db.Clients
-                //                  join db.Payment in Excursions1Context on Client.clientId equals Payment.clientId
-                //                  where (p => p.isPaid == true)
-                //                  select Client).ToList();
-                //    dataGridView1.DataSource = select;
-                //}
-
             }
             else if (selected.Equals("without debts"))
             {
-                //using (var db = new Excursions1Context())
-                //{
-                //    var select = db.Excursions.Where(p => p.startDate <= DateTime.Now).ToList();
-                //    dataGridView1.DataSource = select;
-                //}
+                using (var db = new Excursions1Context())
+                {
+                    var select = (from x in db.Clients.AsEnumerable()
+                                  join y in db.Payments.AsEnumerable()
+                                  on x.clientId equals y.clientId
+                                  where y.isPaid == true
+                                  select x).ToList();
+                    dataGridView1.DataSource = select;
+                }
             }
         }
 
@@ -192,8 +190,11 @@ namespace WindowsFormsDB
 
             if (selected.Equals("all"))
             {
-                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
-                dataGridView3.DataSource = this.excursions1DataSet.Excursion;
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Payments.ToList();
+                    dataGridView3.DataSource = select;
+                }
             }
             else if (selected.Equals("paid"))
             {

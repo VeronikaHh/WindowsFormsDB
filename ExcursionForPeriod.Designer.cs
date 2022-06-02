@@ -31,15 +31,16 @@ namespace WindowsFormsDB
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcursionForPeriod));
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateStart = new System.Windows.Forms.DateTimePicker();
+            this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.b_search = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.excursions1DataSet = new WindowsFormsDB.Excursions1DataSet();
             this.excursionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.excursions1DataSet = new WindowsFormsDB.Excursions1DataSet();
             this.excursionTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
             this.excursionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,23 +49,23 @@ namespace WindowsFormsDB
             this.excursionTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dateStart
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 58);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dateStart.Location = new System.Drawing.Point(16, 58);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(200, 26);
+            this.dateStart.TabIndex = 0;
             // 
-            // dateTimePicker2
+            // dateEnd
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(12, 125);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker2.TabIndex = 1;
+            this.dateEnd.Location = new System.Drawing.Point(12, 125);
+            this.dateEnd.Name = "dateEnd";
+            this.dateEnd.Size = new System.Drawing.Size(200, 26);
+            this.dateEnd.TabIndex = 1;
             // 
             // label1
             // 
@@ -84,15 +85,15 @@ namespace WindowsFormsDB
             this.label2.TabIndex = 3;
             this.label2.Text = "End date";
             // 
-            // button1
+            // b_search
             // 
-            this.button1.Location = new System.Drawing.Point(12, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 48);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.b_search.Location = new System.Drawing.Point(12, 185);
+            this.b_search.Name = "b_search";
+            this.b_search.Size = new System.Drawing.Size(94, 48);
+            this.b_search.TabIndex = 4;
+            this.b_search.Text = "Search";
+            this.b_search.UseVisualStyleBackColor = true;
+            this.b_search.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -115,19 +116,28 @@ namespace WindowsFormsDB
             this.dataGridView1.Size = new System.Drawing.Size(930, 474);
             this.dataGridView1.TabIndex = 5;
             // 
-            // excursions1DataSet
-            // 
-            this.excursions1DataSet.DataSetName = "Excursions1DataSet";
-            this.excursions1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // excursionBindingSource
             // 
             this.excursionBindingSource.DataMember = "Excursion";
             this.excursionBindingSource.DataSource = this.excursions1DataSet;
             // 
+            // excursions1DataSet
+            // 
+            this.excursions1DataSet.DataSetName = "Excursions1DataSet";
+            this.excursions1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // excursionTableAdapter
             // 
             this.excursionTableAdapter.ClearBeforeFill = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(390, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(409, 19);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "List of excursions for a certain period of time with price";
             // 
             // excursionIdDataGridViewTextBoxColumn
             // 
@@ -174,6 +184,7 @@ namespace WindowsFormsDB
             // 
             // Payment
             // 
+            this.Payment.DataPropertyName = "distanceKM";
             this.Payment.HeaderText = "Payment";
             this.Payment.MinimumWidth = 8;
             this.Payment.Name = "Payment";
@@ -184,20 +195,21 @@ namespace WindowsFormsDB
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 544);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.b_search);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateEnd);
+            this.Controls.Add(this.dateStart);
             this.Font = new System.Drawing.Font("Rockwell", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExcursionForPeriod";
             this.Text = "ExcursionForPeriod";
             this.Load += new System.EventHandler(this.ExcursionForPeriod_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,15 +217,16 @@ namespace WindowsFormsDB
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateStart;
+        private System.Windows.Forms.DateTimePicker dateEnd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button b_search;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Excursions1DataSet excursions1DataSet;
         private System.Windows.Forms.BindingSource excursionBindingSource;
         private Excursions1DataSetTableAdapters.ExcursionTableAdapter excursionTableAdapter;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn excursionIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn;
