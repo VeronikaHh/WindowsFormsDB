@@ -42,10 +42,10 @@ namespace WindowsFormsDB
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.excursionBusDriverBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.excursionBusDriverTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionBusDriverTableAdapter();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.excursionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.busIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.driverIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,6 +83,7 @@ namespace WindowsFormsDB
             this.b_search.TabIndex = 11;
             this.b_search.Text = "Search";
             this.b_search.UseVisualStyleBackColor = true;
+            this.b_search.Click += new System.EventHandler(this.b_search_Click);
             // 
             // label2
             // 
@@ -122,10 +123,10 @@ namespace WindowsFormsDB
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
             this.excursionIdDataGridViewTextBoxColumn,
             this.busIdDataGridViewTextBoxColumn,
-            this.driverIdDataGridViewTextBoxColumn,
-            this.Date});
+            this.driverIdDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.excursionBusDriverBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(284, 57);
             this.dataGridView1.Name = "dataGridView1";
@@ -142,6 +143,14 @@ namespace WindowsFormsDB
             // excursionBusDriverTableAdapter
             // 
             this.excursionBusDriverTableAdapter.ClearBeforeFill = true;
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "excursionId";
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 8;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
             // 
             // excursionIdDataGridViewTextBoxColumn
             // 
@@ -164,14 +173,6 @@ namespace WindowsFormsDB
             this.driverIdDataGridViewTextBoxColumn.HeaderText = "driverId";
             this.driverIdDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.driverIdDataGridViewTextBoxColumn.Name = "driverIdDataGridViewTextBoxColumn";
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "excursionId";
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 8;
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
             // 
             // BusSchedule
             // 
@@ -212,9 +213,9 @@ namespace WindowsFormsDB
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource excursionBusDriverBindingSource;
         private Excursions1DataSetTableAdapters.ExcursionBusDriverTableAdapter excursionBusDriverTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn excursionIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn busIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn driverIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
     }
 }

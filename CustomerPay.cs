@@ -15,7 +15,7 @@ namespace WindowsFormsDB
         public CustomerPay()
         {
             InitializeComponent();
-            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns["Payment"].Visible = false;
         }
 
         private void CustomerPay_Load(object sender, EventArgs e)
