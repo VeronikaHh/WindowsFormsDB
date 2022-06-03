@@ -29,6 +29,7 @@ namespace WindowsFormsDB
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.l_Login = new System.Windows.Forms.Label();
             this.l_Password = new System.Windows.Forms.Label();
             this.b_SignIn = new System.Windows.Forms.Button();
@@ -91,7 +92,7 @@ namespace WindowsFormsDB
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(678, 544);
+            this.ClientSize = new System.Drawing.Size(678, 444);
             this.Controls.Add(this.t_login);
             this.Controls.Add(this.t_password);
             this.Controls.Add(this.b_SignIn);
@@ -99,9 +100,10 @@ namespace WindowsFormsDB
             this.Controls.Add(this.l_Login);
             this.Font = new System.Drawing.Font("Rockwell", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sign in";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Enter += new System.EventHandler(this.b_SignIn_Click);
             this.ResumeLayout(false);

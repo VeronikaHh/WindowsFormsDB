@@ -35,16 +35,12 @@ namespace WindowsFormsDB
             this.excursionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.excursionTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.excursionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distanceKMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countOfCustomersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.excursionTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.b_search = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CountOfExcursions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPricePaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,13 +75,9 @@ namespace WindowsFormsDB
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.excursionIdDataGridViewTextBoxColumn,
             this.startDateDataGridViewTextBoxColumn,
-            this.durationDataGridViewTextBoxColumn,
-            this.distanceKMDataGridViewTextBoxColumn,
-            this.countOfCustomersDataGridViewTextBoxColumn,
-            this.excursionTypeDataGridViewTextBoxColumn,
-            this.Payment});
+            this.CountOfExcursions,
+            this.TotalPricePaid});
             this.dataGridView1.DataSource = this.excursionBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(236, 57);
             this.dataGridView1.Name = "dataGridView1";
@@ -93,56 +85,6 @@ namespace WindowsFormsDB
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(930, 450);
             this.dataGridView1.TabIndex = 12;
-            // 
-            // excursionIdDataGridViewTextBoxColumn
-            // 
-            this.excursionIdDataGridViewTextBoxColumn.HeaderText = "excursionId";
-            this.excursionIdDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.excursionIdDataGridViewTextBoxColumn.Name = "excursionIdDataGridViewTextBoxColumn";
-            this.excursionIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "startDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "startDate";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            // 
-            // durationDataGridViewTextBoxColumn
-            // 
-            this.durationDataGridViewTextBoxColumn.DataPropertyName = "duration";
-            this.durationDataGridViewTextBoxColumn.HeaderText = "duration";
-            this.durationDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.durationDataGridViewTextBoxColumn.Name = "durationDataGridViewTextBoxColumn";
-            // 
-            // distanceKMDataGridViewTextBoxColumn
-            // 
-            this.distanceKMDataGridViewTextBoxColumn.DataPropertyName = "distanceKM";
-            this.distanceKMDataGridViewTextBoxColumn.HeaderText = "distanceKM";
-            this.distanceKMDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.distanceKMDataGridViewTextBoxColumn.Name = "distanceKMDataGridViewTextBoxColumn";
-            // 
-            // countOfCustomersDataGridViewTextBoxColumn
-            // 
-            this.countOfCustomersDataGridViewTextBoxColumn.DataPropertyName = "countOfCustomers";
-            this.countOfCustomersDataGridViewTextBoxColumn.HeaderText = "countOfCustomers";
-            this.countOfCustomersDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.countOfCustomersDataGridViewTextBoxColumn.Name = "countOfCustomersDataGridViewTextBoxColumn";
-            // 
-            // excursionTypeDataGridViewTextBoxColumn
-            // 
-            this.excursionTypeDataGridViewTextBoxColumn.DataPropertyName = "excursionType";
-            this.excursionTypeDataGridViewTextBoxColumn.HeaderText = "excursionType";
-            this.excursionTypeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.excursionTypeDataGridViewTextBoxColumn.Name = "excursionTypeDataGridViewTextBoxColumn";
-            // 
-            // Payment
-            // 
-            this.Payment.DataPropertyName = "countOfCustomers";
-            this.Payment.HeaderText = "Payment";
-            this.Payment.MinimumWidth = 8;
-            this.Payment.Name = "Payment";
-            this.Payment.ReadOnly = true;
             // 
             // b_search
             // 
@@ -169,6 +111,25 @@ namespace WindowsFormsDB
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(171, 27);
             this.comboBox1.TabIndex = 14;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "startDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            // 
+            // CountOfExcursions
+            // 
+            this.CountOfExcursions.HeaderText = "Count Of Excursions";
+            this.CountOfExcursions.MinimumWidth = 8;
+            this.CountOfExcursions.Name = "CountOfExcursions";
+            // 
+            // TotalPricePaid
+            // 
+            this.TotalPricePaid.HeaderText = "Total price paid";
+            this.TotalPricePaid.MinimumWidth = 8;
+            this.TotalPricePaid.Name = "TotalPricePaid";
             // 
             // FinReport
             // 
@@ -200,13 +161,9 @@ namespace WindowsFormsDB
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button b_search;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn excursionIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn distanceKMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countOfCustomersDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn excursionTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CountOfExcursions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPricePaid;
     }
 }

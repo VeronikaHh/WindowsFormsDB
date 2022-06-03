@@ -46,10 +46,12 @@ namespace WindowsFormsDB
             this.excursionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.busIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.driverIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.excursions1DataSet1 = new WindowsFormsDB.Excursions1DataSet();
             ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excursionBusDriverBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -174,6 +176,11 @@ namespace WindowsFormsDB
             this.driverIdDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.driverIdDataGridViewTextBoxColumn.Name = "driverIdDataGridViewTextBoxColumn";
             // 
+            // excursions1DataSet1
+            // 
+            this.excursions1DataSet1.DataSetName = "Excursions1DataSet";
+            this.excursions1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // BusSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -194,6 +201,7 @@ namespace WindowsFormsDB
             ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.excursionBusDriverBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +225,6 @@ namespace WindowsFormsDB
         private System.Windows.Forms.DataGridViewTextBoxColumn excursionIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn busIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn driverIdDataGridViewTextBoxColumn;
+        private Excursions1DataSet excursions1DataSet1;
     }
 }
