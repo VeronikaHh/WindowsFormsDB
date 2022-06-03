@@ -29,8 +29,7 @@ namespace WindowsFormsDB
 
         private void b_search_Click(object sender, EventArgs e)
         {
-            int client = (int)comboBox1.SelectedValue;
-            if (client == null)//start date is later then second
+            if (comboBox1.SelectedValue == null)
             {
                 string message = "Choose client please!";
                 string title = "Warning!";
@@ -38,6 +37,8 @@ namespace WindowsFormsDB
             }
             else
             {
+
+                int client = int.Parse(comboBox1.Text);
                 using (var db = new Excursions1Context())
                 {
                     var select = (from x in db.Excursions.AsEnumerable()
