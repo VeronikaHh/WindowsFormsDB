@@ -15,6 +15,42 @@ namespace WindowsFormsDB
         public FinReport()
         {
             InitializeComponent();
+
+        }
+
+        private void b_search_Click(object sender, EventArgs e)
+        {
+            
+            if (dateTimePicker1.Value == null)//start date is later then second
+            {
+                string message = "Choose month please!";
+                string title = "Warning!";
+                MessageBox.Show(message, title);
+            }
+            else
+            {
+                DateTime dateMonth = dateTimePicker1.Value;
+
+
+                using (var db = new Excursions1Context())
+                {
+                    var select = (from x in db.Excursions.AsEnumerable()
+                                  join y in db.Payments.AsEnumerable()
+                                  on x.excursionId equals y.excursionId
+                                  where x.startDate.Month == dateMonth.Month
+                                  group x by x.startDate into p
+                                  select new
+                                  {
+                                      Date = p,
+                                      CountOfExcursions = p.Count(),
+                                    // TotalPricePaid = p.Sum(y => y.paid)
+                                  }).ToList();
+                    dataGridView1.DataSource = select;
+                    dataGridView1.Columns["Date"].DataPropertyName = "Date";
+                    dataGridView1.Columns["CountOfExcursions"].DataPropertyName = "CountOfExcursions";
+                    dataGridView1.Columns["TotalPricePaid"].DataPropertyName = "TotalPricePaid";
+                }
+            }
         }
     }
 }

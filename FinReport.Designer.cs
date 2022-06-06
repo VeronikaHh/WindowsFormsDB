@@ -35,12 +35,12 @@ namespace WindowsFormsDB
             this.excursionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.excursionTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.b_search = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CountOfExcursions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPricePaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b_search = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.excursions1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excursionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -86,32 +86,6 @@ namespace WindowsFormsDB
             this.dataGridView1.Size = new System.Drawing.Size(930, 450);
             this.dataGridView1.TabIndex = 12;
             // 
-            // b_search
-            // 
-            this.b_search.Location = new System.Drawing.Point(12, 136);
-            this.b_search.Name = "b_search";
-            this.b_search.Size = new System.Drawing.Size(94, 46);
-            this.b_search.TabIndex = 11;
-            this.b_search.Text = "Search";
-            this.b_search.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 19);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Choose month:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 75);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 27);
-            this.comboBox1.TabIndex = 14;
-            // 
             // startDateDataGridViewTextBoxColumn
             // 
             this.startDateDataGridViewTextBoxColumn.DataPropertyName = "startDate";
@@ -131,12 +105,38 @@ namespace WindowsFormsDB
             this.TotalPricePaid.MinimumWidth = 8;
             this.TotalPricePaid.Name = "TotalPricePaid";
             // 
+            // b_search
+            // 
+            this.b_search.Location = new System.Drawing.Point(12, 136);
+            this.b_search.Name = "b_search";
+            this.b_search.Size = new System.Drawing.Size(94, 46);
+            this.b_search.TabIndex = 11;
+            this.b_search.Text = "Search";
+            this.b_search.UseVisualStyleBackColor = true;
+            this.b_search.Click += new System.EventHandler(this.b_search_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 19);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Choose month:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(12, 77);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
             // FinReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 517);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.b_search);
@@ -161,9 +161,9 @@ namespace WindowsFormsDB
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button b_search;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CountOfExcursions;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPricePaid;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
