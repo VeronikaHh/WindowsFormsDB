@@ -15,7 +15,8 @@ namespace WindowsFormsDB
         public FinReport()
         {
             InitializeComponent();
-
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "MM/yyyy";
         }
 
         private void b_search_Click(object sender, EventArgs e)
@@ -47,9 +48,9 @@ namespace WindowsFormsDB
                                     TotalPricePaid = x.Value.Sum(y=>y.Payments.FirstOrDefault()?.paid)
                                  }).ToList();
                     dataGridView1.DataSource = select;
-                    //dataGridView1.Columns["Date"].DataPropertyName = "Date";
-                    //dataGridView1.Columns["CountOfExcursions"].DataPropertyName = "CountOfExcursions";
-                    //dataGridView1.Columns["TotalPricePaid"].DataPropertyName = "TotalPricePaid";
+                    dataGridView1.Columns["startDateDataGridViewTextBoxColumn"].DataPropertyName = "Date";
+                    dataGridView1.Columns["CountOfExcursions"].DataPropertyName = "CountOfExcursions";
+                    dataGridView1.Columns["TotalPricePaid"].DataPropertyName = "TotalPricePaid";
 
                 }
             }
