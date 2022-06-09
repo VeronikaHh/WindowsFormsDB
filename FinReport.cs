@@ -20,7 +20,7 @@ namespace WindowsFormsDB
 
         private void b_search_Click(object sender, EventArgs e)
         {
-            
+
             if (dateTimePicker1.Value == null)//start date is later then second
             {
                 string message = "Choose month please!";
@@ -39,16 +39,18 @@ namespace WindowsFormsDB
                                   on x.excursionId equals y.excursionId
                                   where x.startDate.Month == dateMonth.Month
                                   group x by x.startDate into p
-                                  select new
-                                  {
-                                      Date = p,
-                                      CountOfExcursions = p.Count(),
-                                    // TotalPricePaid = p.Sum(y => y.paid)
-                                  }).ToList();
+                                 select p).ToDictionary(g=>g.Key,g=>g.ToList())
+                                 .Select(x=> new 
+                                 { 
+                                    Date = x.Key,
+                                    CountOfExcursions = x.Value.Count(),
+                                    TotalPricePaid = x.Value.Sum(y=>y.Payments.FirstOrDefault()?.paid)
+                                 }).ToList();
                     dataGridView1.DataSource = select;
-                    dataGridView1.Columns["Date"].DataPropertyName = "Date";
-                    dataGridView1.Columns["CountOfExcursions"].DataPropertyName = "CountOfExcursions";
-                    dataGridView1.Columns["TotalPricePaid"].DataPropertyName = "TotalPricePaid";
+                    //dataGridView1.Columns["Date"].DataPropertyName = "Date";
+                    //dataGridView1.Columns["CountOfExcursions"].DataPropertyName = "CountOfExcursions";
+                    //dataGridView1.Columns["TotalPricePaid"].DataPropertyName = "TotalPricePaid";
+
                 }
             }
         }
