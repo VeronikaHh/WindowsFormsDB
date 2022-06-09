@@ -15,17 +15,7 @@ namespace WindowsFormsDB
     public partial class Menu : Form
     {
 
-
-        SqlConnection sqlconnection;
-
-        SqlCommand sqlcommand;
-
         string ConnectionString = @"Data Source=DESKTOP-KDVI0GR;Initial Catalog=Excursions1;Integrated Security=True";
-
-        string ExcQuery;
-
-        DataTable datatable;
-
 
 
         public Menu()
@@ -55,7 +45,6 @@ namespace WindowsFormsDB
             this.clientTableAdapter.Fill(this.excursions1DataSet.Client);
             // TODO: This line of code loads data into the 'excursions1DataSet.Excursion' table. You can move, or remove it, as needed.
             this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
-
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
@@ -82,6 +71,11 @@ namespace WindowsFormsDB
         {
             this.clientTableAdapter.Update(this.excursions1DataSet.Client);
 
+        }
+        //payment save
+        private void saveToolStripButton2_Click(object sender, EventArgs e)
+        {
+            this.paymentTableAdapter.Update(this.excursions1DataSet.Payment);
         }
         //bus save 
         private void saveToolStripButton3_Click(object sender, EventArgs e)
@@ -278,6 +272,69 @@ namespace WindowsFormsDB
         {
             FinReport finReport = new FinReport();
             finReport.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            //sql connection object
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+
+                //set stored procedure name
+                string spName = @"dbo.[price_for_excursions]";
+
+                //define the SqlCommand object
+                SqlCommand cmd = new SqlCommand(spName, conn);
+
+                cmd.Parameters.Add(new SqlParameter("@startDate", SqlDbType.Date)).Value = "01/01/2022";
+
+                //open connection
+                conn.Open();
+
+                //set the SQLCommand type to StoredProcedure
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                //execute the stored procedure                   
+                cmd.ExecuteNonQuery();
+
+
+                //close connection
+                conn.Close();
+            }
+            this.paymentTableAdapter.Fill(this.excursions1DataSet.Payment);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //sql connection object
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+
+                //set stored procedure name
+                string spName = @"dbo.[pay_for_excursions]";
+
+                //define the SqlCommand object
+                SqlCommand cmd = new SqlCommand(spName, conn);
+
+                cmd.Parameters.Add(new SqlParameter("@startDate", SqlDbType.Date)).Value = "01/01/2022";
+
+                //open connection
+                conn.Open();
+
+                //set the SQLCommand type to StoredProcedure
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                //execute the stored procedure                   
+                cmd.ExecuteNonQuery();
+
+
+                //close connection
+                conn.Close();
+            }
+            this.paymentTableAdapter.Fill(this.excursions1DataSet.Payment);
         }
     }
 }

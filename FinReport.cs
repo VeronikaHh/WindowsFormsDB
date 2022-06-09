@@ -17,6 +17,7 @@ namespace WindowsFormsDB
             InitializeComponent();
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "MM/yyyy";
+            dateTimePicker1.ShowUpDown = true;
         }
 
         private void b_search_Click(object sender, EventArgs e)

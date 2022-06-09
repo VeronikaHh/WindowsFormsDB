@@ -88,6 +88,7 @@ namespace WindowsFormsDB
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem2 = new System.Windows.Forms.ToolStripButton();
             this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -256,6 +257,7 @@ namespace WindowsFormsDB
             this.excursionBusDriverTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionBusDriverTableAdapter();
             this.excursionClientTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionClientTableAdapter();
             this.excursionBusTableAdapter = new WindowsFormsDB.Excursions1DataSetTableAdapters.ExcursionBusTableAdapter();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
@@ -363,7 +365,7 @@ namespace WindowsFormsDB
             this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem6;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem6;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1304, 38);
+            this.bindingNavigator2.Size = new System.Drawing.Size(1304, 33);
             this.bindingNavigator2.TabIndex = 4;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -373,7 +375,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorAddNewItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem6.Image")));
             this.bindingNavigatorAddNewItem6.Name = "bindingNavigatorAddNewItem6";
             this.bindingNavigatorAddNewItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem6.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem6.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem6.Text = "Add new";
             // 
             // excursionBindingSource
@@ -389,7 +391,7 @@ namespace WindowsFormsDB
             // bindingNavigatorCountItem6
             // 
             this.bindingNavigatorCountItem6.Name = "bindingNavigatorCountItem6";
-            this.bindingNavigatorCountItem6.Size = new System.Drawing.Size(54, 33);
+            this.bindingNavigatorCountItem6.Size = new System.Drawing.Size(54, 28);
             this.bindingNavigatorCountItem6.Text = "of {0}";
             this.bindingNavigatorCountItem6.ToolTipText = "Total number of items";
             // 
@@ -399,7 +401,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorDeleteItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem6.Image")));
             this.bindingNavigatorDeleteItem6.Name = "bindingNavigatorDeleteItem6";
             this.bindingNavigatorDeleteItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem6.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem6.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorDeleteItem6.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem6
@@ -408,7 +410,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveFirstItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem6.Image")));
             this.bindingNavigatorMoveFirstItem6.Name = "bindingNavigatorMoveFirstItem6";
             this.bindingNavigatorMoveFirstItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem6.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem6.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem6.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem6
@@ -417,13 +419,13 @@ namespace WindowsFormsDB
             this.bindingNavigatorMovePreviousItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem6.Image")));
             this.bindingNavigatorMovePreviousItem6.Name = "bindingNavigatorMovePreviousItem6";
             this.bindingNavigatorMovePreviousItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem6.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem6.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem6.Text = "Move previous";
             // 
             // bindingNavigatorSeparator18
             // 
             this.bindingNavigatorSeparator18.Name = "bindingNavigatorSeparator18";
-            this.bindingNavigatorSeparator18.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator18.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem6
             // 
@@ -438,7 +440,7 @@ namespace WindowsFormsDB
             // bindingNavigatorSeparator19
             // 
             this.bindingNavigatorSeparator19.Name = "bindingNavigatorSeparator19";
-            this.bindingNavigatorSeparator19.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator19.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem6
             // 
@@ -446,7 +448,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveNextItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem6.Image")));
             this.bindingNavigatorMoveNextItem6.Name = "bindingNavigatorMoveNextItem6";
             this.bindingNavigatorMoveNextItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem6.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem6.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem6.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem6
@@ -455,13 +457,13 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveLastItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem6.Image")));
             this.bindingNavigatorMoveLastItem6.Name = "bindingNavigatorMoveLastItem6";
             this.bindingNavigatorMoveLastItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem6.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem6.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem6.Text = "Move last";
             // 
             // bindingNavigatorSeparator20
             // 
             this.bindingNavigatorSeparator20.Name = "bindingNavigatorSeparator20";
-            this.bindingNavigatorSeparator20.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator20.Size = new System.Drawing.Size(6, 33);
             // 
             // saveToolStripButton
             // 
@@ -469,14 +471,14 @@ namespace WindowsFormsDB
             this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
             this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(34, 33);
+            this.saveToolStripButton.Size = new System.Drawing.Size(34, 28);
             this.saveToolStripButton.Text = "&Save";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 33);
             // 
             // toolStripComboBox5
             // 
@@ -487,7 +489,7 @@ namespace WindowsFormsDB
             "coming",
             "finished"});
             this.toolStripComboBox5.Name = "toolStripComboBox5";
-            this.toolStripComboBox5.Size = new System.Drawing.Size(141, 38);
+            this.toolStripComboBox5.Size = new System.Drawing.Size(141, 33);
             this.toolStripComboBox5.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox5_SelectedIndexChanged);
             // 
             // dataGridView1
@@ -786,6 +788,8 @@ namespace WindowsFormsDB
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button6);
+            this.tabPage3.Controls.Add(this.button5);
             this.tabPage3.Controls.Add(this.bindingNavigator3);
             this.tabPage3.Controls.Add(this.dataGridView3);
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
@@ -795,6 +799,16 @@ namespace WindowsFormsDB
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Payments";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(674, 421);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(204, 47);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Calculate price";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // bindingNavigator3
             // 
@@ -825,7 +839,7 @@ namespace WindowsFormsDB
             this.bindingNavigator3.MovePreviousItem = this.bindingNavigatorMovePreviousItem2;
             this.bindingNavigator3.Name = "bindingNavigator3";
             this.bindingNavigator3.PositionItem = this.bindingNavigatorPositionItem2;
-            this.bindingNavigator3.Size = new System.Drawing.Size(1304, 33);
+            this.bindingNavigator3.Size = new System.Drawing.Size(1304, 38);
             this.bindingNavigator3.TabIndex = 1;
             this.bindingNavigator3.Text = "bindingNavigator3";
             // 
@@ -835,7 +849,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorAddNewItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem2.Image")));
             this.bindingNavigatorAddNewItem2.Name = "bindingNavigatorAddNewItem2";
             this.bindingNavigatorAddNewItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem2.Text = "Add new";
             // 
             // paymentBindingSource
@@ -846,7 +860,7 @@ namespace WindowsFormsDB
             // bindingNavigatorCountItem2
             // 
             this.bindingNavigatorCountItem2.Name = "bindingNavigatorCountItem2";
-            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(54, 33);
             this.bindingNavigatorCountItem2.Text = "of {0}";
             this.bindingNavigatorCountItem2.ToolTipText = "Total number of items";
             // 
@@ -856,7 +870,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorDeleteItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem2.Image")));
             this.bindingNavigatorDeleteItem2.Name = "bindingNavigatorDeleteItem2";
             this.bindingNavigatorDeleteItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorDeleteItem2.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem2
@@ -865,7 +879,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveFirstItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem2.Image")));
             this.bindingNavigatorMoveFirstItem2.Name = "bindingNavigatorMoveFirstItem2";
             this.bindingNavigatorMoveFirstItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveFirstItem2.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem2
@@ -874,13 +888,13 @@ namespace WindowsFormsDB
             this.bindingNavigatorMovePreviousItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem2.Image")));
             this.bindingNavigatorMovePreviousItem2.Name = "bindingNavigatorMovePreviousItem2";
             this.bindingNavigatorMovePreviousItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMovePreviousItem2.Text = "Move previous";
             // 
             // bindingNavigatorSeparator6
             // 
             this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator6";
-            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorPositionItem2
             // 
@@ -895,7 +909,7 @@ namespace WindowsFormsDB
             // bindingNavigatorSeparator7
             // 
             this.bindingNavigatorSeparator7.Name = "bindingNavigatorSeparator7";
-            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem2
             // 
@@ -903,7 +917,7 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveNextItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem2.Image")));
             this.bindingNavigatorMoveNextItem2.Name = "bindingNavigatorMoveNextItem2";
             this.bindingNavigatorMoveNextItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveNextItem2.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem2
@@ -912,13 +926,13 @@ namespace WindowsFormsDB
             this.bindingNavigatorMoveLastItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem2.Image")));
             this.bindingNavigatorMoveLastItem2.Name = "bindingNavigatorMoveLastItem2";
             this.bindingNavigatorMoveLastItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveLastItem2.Text = "Move last";
             // 
             // bindingNavigatorSeparator8
             // 
             this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator8";
-            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 38);
             // 
             // saveToolStripButton2
             // 
@@ -926,13 +940,14 @@ namespace WindowsFormsDB
             this.saveToolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton2.Image")));
             this.saveToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton2.Name = "saveToolStripButton2";
-            this.saveToolStripButton2.Size = new System.Drawing.Size(34, 28);
+            this.saveToolStripButton2.Size = new System.Drawing.Size(34, 33);
             this.saveToolStripButton2.Text = "&Save";
+            this.saveToolStripButton2.Click += new System.EventHandler(this.saveToolStripButton2_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 33);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 38);
             // 
             // toolStripComboBox2
             // 
@@ -942,7 +957,7 @@ namespace WindowsFormsDB
             "paid",
             "not paid"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(141, 33);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(141, 38);
             this.toolStripComboBox2.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox2_SelectedIndexChanged);
             // 
             // dataGridView3
@@ -2345,6 +2360,16 @@ namespace WindowsFormsDB
             // 
             this.excursionBusTableAdapter.ClearBeforeFill = true;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(948, 421);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(204, 47);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Pay";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2641,5 +2666,7 @@ namespace WindowsFormsDB
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
