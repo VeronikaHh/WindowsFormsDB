@@ -120,8 +120,11 @@ namespace WindowsFormsDB
 
             if (selected.Equals("all"))
             {
-                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
-                dataGridView1.DataSource = this.excursions1DataSet.Excursion;
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Excursions.ToList();
+                    dataGridView3.DataSource = select;
+                }
             }
             else if (selected.Equals("coming"))
             {
@@ -148,8 +151,11 @@ namespace WindowsFormsDB
 
             if (selected.Equals("all"))
             {
-                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
-                dataGridView1.DataSource = this.excursions1DataSet.Excursion;
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Clients.ToList();
+                    dataGridView3.DataSource = select;
+                }
             }
             else if (selected.Equals("with debts"))
             {
@@ -215,8 +221,11 @@ namespace WindowsFormsDB
 
             if (selected.Equals("all"))
             {
-                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
-                dataGridView3.DataSource = this.excursions1DataSet.Excursion;
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Buses.ToList();
+                    dataGridView3.DataSource = select;
+                }
             }
             else if (selected.Equals("free"))
             {
@@ -235,8 +244,11 @@ namespace WindowsFormsDB
 
             if (selected.Equals("all"))
             {
-                //this.excursionTableAdapter.Fill(this.excursions1DataSet.Excursion);
-                dataGridView3.DataSource = this.excursions1DataSet.Excursion;
+                using (var db = new Excursions1Context())
+                {
+                    var select = db.Drivers.ToList();
+                    dataGridView3.DataSource = select;
+                }
             }
             else if (selected.Equals("free"))
             {
